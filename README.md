@@ -1,3 +1,6 @@
 # CricketData
 ### Code to web scrape specific cricket statistics from cricket websites like ESPNcricinfo and Howstat which can be used to analyse player and game performances.
 This repository contains 3 files of python code in the 'venv' folder. 
+1) 'balldata.py' - This code aims to scrape data from the ball by ball commentary section of a match scorecard on ESPNcricinfo. The code takes the fully loaded and saved HTML page from your local storage and extract ball by ball data from the page using Beautiful Soup. The ESPNcricinfo commentary page is dynamic and therefore needs to be loaded completely before being saved. The Beautiful Soup library does not scrape all data from Dynamic websites. The next part of the code aims to extract 'Line' and 'Length' from the commentary. Using keyword search on the commentary, the line and and length are stored into new variables for each ball. Depending on the keyword in the commentary, the variables are assigned a category.
+2) 'statsguruscraper.py' - This code takes a ESPNcricinfo statsguru URL as an input and scrapes the tabular data on that webpage into a CSV.
+3) 'howstatscraper.py' - This code takes a Howstat URL as an input and scrapes the tabular data on that webpage into a CSV.
